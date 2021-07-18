@@ -11,16 +11,6 @@ router.get("/api/workouts", async (req, res) => {
   }
 });
 
-router.get("/api/allworkouts", async (req, res) => {
-  try {
-    const workoutData = await Workout.find({}).sort({ day: -1 });
-    res.json(workoutData);
-  } catch (err) {
-    console.log(err);
-    res.status(400).json(err);
-  }
-});
-
 router.get("/api/workouts/range", async (req, res) => {
   try {
     const workoutData = await Workout.find({})
@@ -31,8 +21,8 @@ router.get("/api/workouts/range", async (req, res) => {
     const workoutDataWithDuration = workoutData.map((workout) => {
       const totalDuration = workout.exercises.reduce((acc, cur) => {
         acc.duration = (acc.duration || 0) + cur.duration;
-        return acc.duration;
-      }, {});
+        return acc;
+      }, {}).duration;
       return { ...workout, totalDuration };
     });
     //  console.log(workoutDataWithDuration);
