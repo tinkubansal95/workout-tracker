@@ -3,7 +3,7 @@ const { Workout } = require("../models");
 
 router.get("/api/workouts", async (req, res) => {
   try {
-    const workoutData = await Workout.find({}).sort({ day: -1 }).limit(1);
+    const workoutData = await Workout.find({}).sort({ day: -1 });
     res.json(workoutData);
   } catch (err) {
     console.log(err);
