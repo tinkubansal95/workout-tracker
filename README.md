@@ -1,4 +1,4 @@
-# Tech Book Blog
+# Workout Tracker
 
 ![Licence](https://img.shields.io/badge/Licence-MIT-green.png)
 
