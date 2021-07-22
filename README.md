@@ -27,8 +27,8 @@ This application has the following features:
 - Application's homepage also includes details about the last workout of user.
 - Application allows user can add exercises to the most recent workout plan.
 - Apllication allows user can also add new exercises to a new workout plan.
-- Apllication's stats view the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-- Application's stats view the total duration of each workout from the past seven workouts on the `stats` page.
+- Apllication's stats view the combined weight of multiple exercises from the past seven workouts on the stats page.
+- Application's stats view the total duration of each workout from the past seven workouts on the stats page.
 
 ## Technologies Used:
 
